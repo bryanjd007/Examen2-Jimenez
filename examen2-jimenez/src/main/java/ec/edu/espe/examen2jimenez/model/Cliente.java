@@ -11,22 +11,26 @@ import java.util.List;
 
 @Data
 @Builder
-@Document(collection = "exercises")
-public class Exercise {
+@Document(collection = "clientes")
+public class Cliente {
     @Id
     private String id;
 
-    private String name;
+    private String cedula;
 
-    private Integer age;
+    private String nombres;
 
-    private List<String> fruits;
+    private String apellidos;
 
-    private List<Animal> animals;
+    private LocalDateTime fechaNacimiento;
 
-    private LocalDateTime executeDate;
+    private String direccionPrincipal;
 
-    private LocalDateTime createDate;
+    private String telefono;
+
+    private String correoElectronico;
+
+    private List<ClienteTurno> cuentas;
 
     @Version
     private Long version;
